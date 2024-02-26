@@ -1,22 +1,12 @@
 # uCDHWs
 Identify, analyze, and visualize urban compound drought-heatwave (u-CDHW) events
 
-Here a heatwave will be defined as a period of at least three consecutive days, where the daily maximum temperature in a city is higher than the 90th percentile in the warm season. An urban compound drought-heatwave (u-CDHW) will be identified when a heatwave in a city coincides with a monthly drought event in watersheds and aquifers where the city acquires its water source. An open dataset linking cities with their urban water source developed by (McDondald et al 2014)13 will be used to connect urban heatwave and watershed drought events. The severity of a compound event (u-CDHWS) will be calculated by first multiplying the heatwave severity (HWd) in the city and drought severity ($DSd$) in the water sources on each day, and then summing the daily values over the event:
+Here a heatwave will be defined as a period of at least three consecutive days, where the daily maximum temperature in a city is higher than the 90th percentile in the warm season. An urban compound drought-heatwave (u-CDHW) will be identified when a heatwave in a city coincides with a monthly drought event in watersheds and aquifers where the city acquires its water source. An open dataset linking cities with their urban water source developed by (McDondald et al 2014)13 will be used to connect urban heatwave and watershed drought events. The severity of a compound event (u-CDHWS) will be calculated by first multiplying the heatwave severity (HWd) in the city and drought severity ($DS_d$) in the water sources on each day, and then summing the daily values over the event:
 
-$$
-u–CDHWS=d=1d=DHWdDSd; D3
-$$
+\[
+u-CDHWS = \sum_{d=1}^{D} HW_d \times DS_d
+\]
 
-where $D$ is the duration of the event. The heatwave severity (HWd) will be calculated as
+where \(D\) is the duration of the event, \(HW_d\) is calculated as the ratio of the difference between the daily maximum temperature (\(T_{max,d}\)) and the 25th percentile temperature (\(T_{25p}\)) to the difference between the 75th and 25th percentile temperatures of \(T_{max}\) in the warm season. The drought severity (\(DS_d\)) is calculated based on the anomalies of terrestrial water storage (\(W_{ij}\)) compared to the mean (\(W_j\)) and standard deviation (\(\sigma_j\)) of anomalies in the month \(j\).
 
-$$
-HWd=Tmax,d-T25p/T75p-T25p
-$$
-
-where Tmax,d is the daily maximum temperature on day d, and T25p and T75p are the 25th and 75th percentiles of Tmax in the warm season. The drought severity (DSd) will be calculated as
-
-$$
-DSd=Wj-Wi,j/j
-$$
-
-where $Wi,j$ is the anomalies of terrestrial water storage in year i and month j, and Wj and j are the mean value and standard deviation of anomalies in month j. The daily values of DSd are the same for each month. Historical records of daily maximum temperature and monthly terrestrial water storage will be obtained from the European Centre for Medium-Range Weather Forecast (ECMWF) atmospheric reanalysis version 5 (ERA5)
+These equations help in assessing the combined impact of heatwaves and droughts on urban greening effectiveness by integrating climate data and water resource availability. The document uses these calculations to identify cities at risk of reduced cooling effects from urban greening due to u-CDHWs and to propose strategies for enhancing climate resilience.
