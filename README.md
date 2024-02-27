@@ -1,7 +1,7 @@
 # uCDHWs
 Identify, analyze, and visualize urban compound drought-heatwave (u-CDHW) events
 
-Here a heatwave will be defined as a period of at least three consecutive days, where the daily maximum temperature in a city is higher than the 90th percentile in the warm season. An urban compound drought-heatwave (u-CDHW) will be identified when a heatwave in a city coincides with a monthly drought event in watersheds and aquifers where the city acquires its water source. An open dataset linking cities with their urban water source developed by (McDondald et al 2014)13 will be used to connect urban heatwave and watershed drought events. The severity of a compound event (u-CDHWS) will be calculated by first multiplying the heatwave severity (HWd) in the city and drought severity ($DS_d$) in the water sources on each day, and then summing the daily values over the event:
+Here a heatwave will be defined as a period of at least three consecutive days, where the daily maximum temperature in a city is higher than the 90th percentile in the warm season. An urban compound drought-heatwave (u-CDHW) will be identified when a heatwave in a city coincides with a monthly drought event in watersheds and aquifers where the city acquires its water source. An open dataset linking cities with their urban water source developed by (McDondald et al 2014) will be used to connect urban heatwave and watershed drought events. The severity of a compound event (u-CDHWS) will be calculated by first multiplying the heatwave severity (HWd) in the city and drought severity ($DS_d$) in the water sources on each day, and then summing the daily values over the event:
 
 $$
 uCDHW_S = \sum_{d=1}^{D} (HW_d \times DS_d)
